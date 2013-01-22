@@ -217,4 +217,11 @@ fun! BIG5()
 	set fileencoding=big5
 endfun
 
+" 回到最後一次編輯時游標的位置
+if has("autocmd")
+    autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
+endif
 
