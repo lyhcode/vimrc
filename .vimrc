@@ -1,6 +1,22 @@
 " call pathogen#infect()
 
-set nocompatible               " be iMproved
+set nocompatible        " not compatible with the old-fashion vi mode
+set bs=2                " allow backspacing over everything in insert mode
+set history=100         " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+set autoread             " auto read when file is changed from outside
+set noerrorbells
+set hidden              " Allow "hidden" buffers.
+set nobomb              " remove UTF-8 bomb
+set nocp
+set cursorline
+set nu                  " show line numbers
+set ai
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
@@ -20,14 +36,11 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
-" " origin repos on github
+
+" origin repos on github
 " Bundle 'Townk/vim-autoclose'
 " Bundle 'vim-scripts/OmniCppComplete'
 " Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'scrooloose/nerdtree'
 " Bundle 'Lokaltog/vim-powerline'
 " Bundle 'ervandew/supertab'
 " Bundle 'majutsushi/tagbar'
@@ -46,59 +59,115 @@ Bundle 'gmarik/vundle'
 " Bundle 'tpope/vim-rails'
 " Bundle 'kchmck/vim-coffee-script'
 " Bundle 'othree/html5.vim'
-" Bundle 'jistr/vim-nerdtree-tabs'
 " Bundle 'wookiehangover/jshint.vim'
 
-" " origin repos on vim scripts
-"Bundle 'showcolor'
-"Bundle 'skammer/vim-css-color'
+" origin repos on vim scripts
+" Bundle 'showcolor'
+" Bundle 'skammer/vim-css-color'
+
+if !has('gui_running')
+    Bundle 'scrooloose/nerdtree'
+    Bundle 'jistr/vim-nerdtree-tabs'
+endif
 
 " Colors Solarized
 Bundle 'altercation/vim-colors-solarized'
 
+" VimRoom
+" Bundle 'mikewest/vimroom'
 
 syntax enable
 
 if has('gui_running')
-	" set guioptions=egmrt
 	colorscheme solarized
-    " set background=light
-	set background=dark
+    set background=light
+	" set background=dark
+	"set guioptions=egmrt
+	set guioptions-=M
+	set guioptions-=T
     set guifont=Droid\ Sans\ Mono:h16
 else
-    " colorscheme torte
     " set t_Co=256
-    colorscheme 256-jungle-hack
+    colorscheme 256-jungle-black
     " set background=dark
     set background=light
-    " colorscheme adrian
+
+    hi CursorLine guibg=#003853 ctermbg=17 gui=none cterm=none
+    hi Comment ctermfg=darkcyan
+    hi ColorColumn ctermbg=darkgray
+    hi StatusLine ctermbg=19 ctermfg=white
+    hi LineNr ctermfg=236 ctermbg=232
+
+    set cc=80               " corlorcolumn
+    set foldcolumn=2        " increase left margin 
+    set numberwidth=6
 endif
 
+"---------- Preferences ----------
 
-" set nocompatible        " not compatible with the old-fashion vi mode
-" set bs=2        " allow backspacing over everything in insert mode
-" set history=100     " keep 50 lines of command line history
-" set ruler       " show the cursor position all the time
-" set autoread        " auto read when file is changed from outside
-" set noerrorbells
-" set hidden              " Allow "hidden" buffers.
-" set nobomb              " remove UTF-8 bomb
-" set nocp
-" set cursorline
-" 
-set nu
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set ai
+set clipboard=unnamed	" yank to the system register (*) by default
+set showmatch		" Cursor shows matching ) and }
+set showmode		" Show current mode
+set wildchar=<TAB>	" start wild expansion in the command line using <TAB>
+set wildmenu            " wild char completion menu
+
+" ignore these files while expanding wild chars
+set wildignore=*.o,*.class,*.pyc
+
+set autoindent		" auto indentation ' set ai
+set incsearch		" incremental search
+set nobackup		" no *~ backup files
+set copyindent		" copy the previous indentation on autoindenting
+set ignorecase		" ignore case when searching
+set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
+set smarttab		" insert tabs on the start of a line according to context
+
+" TAB Page setting{
+   set switchbuf=usetab
+   "nmap <C-Tab> :tabn<CR>
+   nmap <C-n> :tabn<CR>
+   "nmap <C-S-Tab> :tabp<CR>
+   nmap <C-p> :tabp<CR>
+   nmap <C-t> :tabnew<CR>
+"}
+
+" TAB setting{
+   set expandtab        "replace <TAB> with spaces
+   set softtabstop=4 
+   set shiftwidth=4 
+   set tabstop=4
+   set smarttab
+
+   au FileType Makefile set noexpandtab
+"}      							
+
+" status line {
+"set laststatus=2
+"set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \
+"set statusline+=\ \ \ [%{&ff}/%Y]
+"set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
+"set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
+
+function! CurDir()
+    let curdir = substitute(getcwd(), $HOME, "~", "")
+    return curdir
+endfunction
+
+function! HasPaste()
+    if &paste
+        return '[PASTE]'
+    else
+        return ''
+    endif
+endfunction
+"}
 
 autocmd BufNewFile,BufRead *.R map <F5> <Esc>:w!<CR>:!R --no-save < %<CR>
 autocmd BufNewFile,BufRead *.groovy map <F5> <Esc>:w!<CR>:!groovy %<CR>
 autocmd BufNewFile,BufRead *.gradle map <F5> <Esc>:w!<CR>:!gradle -b %<CR>
 autocmd BufNewFile,BufRead *.rst map <F5> <Esc>:w!<CR>:!make latex<CR>
 
-nnoremap <silent> <F1> <Esc>:NERDTreeToggle<CR>
+" nnoremap <silent> <F1> <Esc>:NERDTreeToggle<CR>
 nnoremap <silent> <F2> <Esc>:w!<CR>
 nnoremap <silent> <F3> <Esc>:tabp<CR>
 nnoremap <silent> <F4> <Esc>:tabn<CR>
@@ -125,8 +194,27 @@ filetype plugin indent on     " required!
 "
 "
 
-" --- NERDTree ---
+"---------- NERDTree ----------
 " \n toggles NERDTree 
-nmap <leader>n :NERDTreeToggle<CR>
-"let g:nerdtree_tabs_open_on_console_startup=1
-let NERDTreeShowBookmarks=1
+" nmap <leader>n :NERDTreeToggle<CR>
+" let g:nerdtree_tabs_open_on_console_startup=1
+" let NERDTreeShowBookmarks=1
+
+fun! BIG5_UTF8()
+	set encoding=utf-8                                  
+	set termencoding=big5
+endfun
+
+fun! UTF8()
+	set encoding=utf-8                                  
+	set termencoding=big5
+	set fileencoding=utf-8
+	set fileencodings=ucs-bom,big5,utf-8,latin1
+endfun
+
+fun! BIG5()
+	set encoding=big5
+	set fileencoding=big5
+endfun
+
+
