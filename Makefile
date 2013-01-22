@@ -1,4 +1,4 @@
 install:
-	ln -sf ctags ~/.ctags
-	ln -sf vimrc ~/.vimrc
-	ln -sf tmux.conf ~/.tmux.conf
+	ln -sf `pwd`/ctags ~/.ctags
+	ln -sf `pwd`/vimrc ~/.vimrc
+	ln -sf `pwd`/tmux.conf ~/.tmux.conf
