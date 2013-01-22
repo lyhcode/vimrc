@@ -1,28 +1,32 @@
-### My .vim folder and .vimrc file ###
+### Vim for developer ###
 
-### Usages ###
+### Install ###
 
-Installation
+Following commands will make a copy to your home directory.
 
-    # backup first
-    tar zcvf vimrc.tgz ~/.vimrc ~/.vim
-    
-    # git clone a copy to your home
+    # clone to your home
     git clone git://github.com/lyhcode/vimrc.git ~/.vim
-    
-    # create a link to .vimrc
-    ln -sf ~/.vim/.vimrc ~/.vimrc
 
-Note
+Install with "make install"
+
+    # make it
+    cd ~/.vim
+    make install
+
+Your old vim configs will backup to "~/.vim-backup.tgz" file.
+
+### Note ###
+
+You must do a :BundleInstall command in vim to get all bundle resources.
 
     # In your vim, run this command.
     # It will install all required plugins.
     :BundleInstall
 
-Restart your vim to take effects.
+After installation done, remember to restart your vim.
 
 ### ScreenShots ###
 
-Run Vim with tmux.
+Here is my Vim run under tmux. A modern and fancy coding environment. Vim Rocks!
 
 ![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen1.png)
