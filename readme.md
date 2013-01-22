@@ -30,3 +30,7 @@ After installation done, remember to restart your vim.
 Here is my Vim run under tmux. A modern and fancy coding environment. Vim Rocks!
 
 ![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen1.png)
+
+Sure, with tagbar and groovy-enabled ctags, Vim is really nice Groovy and Grails IDE.
+
+![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen2.png)
