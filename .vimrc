@@ -42,11 +42,11 @@ Bundle 'gmarik/vundle'
 " Bundle 'vim-scripts/OmniCppComplete'
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'Lokaltog/vim-powerline'
-" Bundle 'ervandew/supertab'
-" Bundle 'majutsushi/tagbar'
+Bundle 'ervandew/supertab'
+Bundle 'mbbill/code_complete'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'vim-scripts/VisIncr'
-" Bundle 'wincent/Command-T'
+Bundle 'wincent/Command-T'
 " Bundle 'shawncplus/phpcomplete.vim'
 " Bundle 'tomtom/tlib_vim'
 " Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -64,6 +64,27 @@ Bundle 'gmarik/vundle'
 " origin repos on vim scripts
 " Bundle 'showcolor'
 " Bundle 'skammer/vim-css-color'
+
+" Bundle 'taglist.vim'
+" let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;f:function;v:variables'
+let g:tagbar_type_groovy = {
+\ 'ctagstype' : 'groovy',
+\ 'kinds' : [
+\ 'p:package',
+\ 'c:class',
+\ 'i:interface',
+\ 'f:function',
+\ 'v:variables',
+\ ]
+\ }
+let g:tagbar_left=1
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
+
+" tagbar, please install ctags first before use
+Bundle 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 
 if !has('gui_running')
     Bundle 'scrooloose/nerdtree'
