@@ -1,4 +1,10 @@
-### Vim for developer ###
+# Vim for Coders #
+
+### Project goals ###
+
+- Built-in Vundle for clean bundles/plugins management.
+- For modern web devloper need.
+- Support Groovy and Grails.
 
 ### Install ###
 
