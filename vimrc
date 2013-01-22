@@ -81,6 +81,9 @@ let g:tagbar_left=1
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
 
+" groovy, grails, grale support
+au BufNewFile,BufRead *.gradle setf groovy
+
 " tagbar, please install ctags first before use
 Bundle 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
