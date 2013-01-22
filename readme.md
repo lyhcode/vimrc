@@ -23,4 +23,6 @@ Restart your vim to take effects.
 
 ### ScreenShots ###
 
+Run Vim with tmux.
+
 ![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen1.png)
