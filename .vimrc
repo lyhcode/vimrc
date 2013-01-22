@@ -1,4 +1,61 @@
-call pathogen#infect()
+" call pathogen#infect()
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
+" non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+" ...
+" " origin repos on github
+" Bundle 'Townk/vim-autoclose'
+" Bundle 'vim-scripts/OmniCppComplete'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'scrooloose/nerdtree'
+" Bundle 'Lokaltog/vim-powerline'
+" Bundle 'ervandew/supertab'
+" Bundle 'majutsushi/tagbar'
+" Bundle 'vim-scripts/YankRing.vim'
+" Bundle 'vim-scripts/VisIncr'
+" Bundle 'wincent/Command-T'
+" Bundle 'shawncplus/phpcomplete.vim'
+" Bundle 'tomtom/tlib_vim'
+" Bundle 'MarcWeber/vim-addon-mw-utils'
+" Bundle 'garbas/vim-snipmate'
+" Bundle 'honza/snipmate-snippets'
+" Bundle 'pangloss/vim-javascript'
+" Bundle 'vim-scripts/nginx.vim'
+" Bundle 'guns/xterm-color-table.vim'
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-rails'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'othree/html5.vim'
+" Bundle 'jistr/vim-nerdtree-tabs'
+" Bundle 'wookiehangover/jshint.vim'
+
+" " origin repos on vim scripts
+"Bundle 'showcolor'
+"Bundle 'skammer/vim-css-color'
+
+" Colors Solarized
+Bundle 'altercation/vim-colors-solarized'
+
 
 syntax enable
 
@@ -18,17 +75,17 @@ else
 endif
 
 
-set nocompatible        " not compatible with the old-fashion vi mode
-set bs=2        " allow backspacing over everything in insert mode
-set history=100     " keep 50 lines of command line history
-set ruler       " show the cursor position all the time
-set autoread        " auto read when file is changed from outside
-set noerrorbells
-set hidden              " Allow "hidden" buffers.
-set nobomb              " remove UTF-8 bomb
-set nocp
-set cursorline
-
+" set nocompatible        " not compatible with the old-fashion vi mode
+" set bs=2        " allow backspacing over everything in insert mode
+" set history=100     " keep 50 lines of command line history
+" set ruler       " show the cursor position all the time
+" set autoread        " auto read when file is changed from outside
+" set noerrorbells
+" set hidden              " Allow "hidden" buffers.
+" set nobomb              " remove UTF-8 bomb
+" set nocp
+" set cursorline
+" 
 set nu
 set tabstop=4
 set softtabstop=4
@@ -54,62 +111,6 @@ nnoremap <silent> <F8> <Esc><C-D>
 " use TAB for Makefile
 
 autocmd FileType make setlocal noexpandtab
-
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" ...
-" " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-" " origin repos on github
-Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/OmniCppComplete'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
-"Bundle 'vim-scripts/YankRing.vim'
-Bundle 'vim-scripts/VisIncr'
-Bundle 'wincent/Command-T'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/snipmate-snippets'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/nginx.vim'
-Bundle 'guns/xterm-color-table.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'othree/html5.vim'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'wookiehangover/jshint.vim'
-
-" " origin repos on vim scripts
-"Bundle 'showcolor'
-"Bundle 'skammer/vim-css-color'
-
 
 filetype plugin indent on     " required!
 "
