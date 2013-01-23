@@ -21,6 +21,12 @@ Install with "make install"
 
 Your old vim configs will backup to "~/.vim-backup.tgz" file.
 
+### More ###
+
+For more snipmate-snippets,
+
+    make install-snippets
+
 ### Note ###
 
 You must do a :BundleInstall command in vim to get all bundle resources.
