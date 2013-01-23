@@ -37,7 +37,6 @@ Bundle 'gmarik/vundle'
 " Bundle 'FuzzyFinder'
 
 " origin repos on github
-" Bundle 'Townk/vim-autoclose'
 " Bundle 'vim-scripts/OmniCppComplete'
 " Bundle 'mbbill/code_complete'
 " Bundle 'vim-scripts/YankRing.vim'
@@ -213,6 +212,9 @@ else
 endif
 
 "---------- Preferences ----------
+
+" an  auto-complete for  open-close pair  of  characters feature
+Bundle 'Townk/vim-autoclose'
 
 set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
