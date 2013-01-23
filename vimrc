@@ -42,12 +42,10 @@ Bundle 'gmarik/vundle'
 " Bundle 'vim-scripts/OmniCppComplete'
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'Lokaltog/vim-powerline'
-Bundle 'ervandew/supertab'
-Bundle 'mbbill/code_complete'
+" Bundle 'mbbill/code_complete'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'vim-scripts/VisIncr'
 " Bundle 'shawncplus/phpcomplete.vim'
-" Bundle 'tomtom/tlib_vim'
 " Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/nginx.vim'
 " Bundle 'guns/xterm-color-table.vim'
@@ -94,10 +92,12 @@ Bundle 'mbbill/code_complete'
 " Bundle 'css_color.vim'
 " Bundle 'hallettj/jslint.vim'
 
+" <TAB>
+Bundle 'ervandew/supertab'
+
 " The IndentAnything plugin is intended to make it easier to write new
 " indentation scripts and/or supplement existing ones.  It makes the
 " assumption that all indentable languages have similar characteristics: 
-"
 " - blocks of code or text over multiple lines 
 " - continuation lines 
 " - comments 
@@ -122,8 +122,9 @@ Bundle 'JavaScript-syntax'
 " often-typed text that you can insert into your document using a trigger word
 " followed by a <tab>. 
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
+Bundle 'tomtom/tlib_vim'
 Bundle 'honza/snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
 
 " Modern Web Development
 "Bundle 'html5.vim'
