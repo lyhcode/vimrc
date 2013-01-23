@@ -57,3 +57,7 @@ Here is my Vim run under tmux. A modern and fancy coding environment. Vim Rocks!
 Sure, with tagbar and groovy-enabled ctags, Vim is really nice Groovy and Grails IDE.
 
 ![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen2.png)
+
+Vim status line with powerline plugin and patched Source Code Pro font.
+
+![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen3.png)
