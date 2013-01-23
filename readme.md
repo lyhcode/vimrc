@@ -21,7 +21,7 @@ Install with "make install"
 
 Your old vim configs will backup to "~/.vim-backup.tgz" file.
 
-### More ###
+### More Snippets ###
 
 For more snipmate-snippets,
 
