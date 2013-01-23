@@ -30,7 +30,6 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 " Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
@@ -40,7 +39,6 @@ Bundle 'gmarik/vundle'
 " origin repos on github
 " Bundle 'Townk/vim-autoclose'
 " Bundle 'vim-scripts/OmniCppComplete'
-" Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'mbbill/code_complete'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'vim-scripts/VisIncr'
@@ -251,6 +249,14 @@ set smarttab		" insert tabs on the start of a line according to context
 
    au FileType Makefile set noexpandtab
 "}      							
+
+" ---------- EasyMotion ----------
+Bundle 'Lokaltog/vim-easymotion'
+"let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
+
+" ---------- Powerline Statusbar ----------
 
 " status line {
 set laststatus=2

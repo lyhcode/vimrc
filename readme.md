@@ -61,3 +61,8 @@ Sure, with tagbar and groovy-enabled ctags, Vim is really nice Groovy and Grails
 Vim status line with powerline plugin and patched Source Code Pro font.
 
 ![screen](https://raw.github.com/lyhcode/vimrc/master/screenshot/screen3.png)
+
+### References ###
+
+- http://github.com/beer/shell
+
