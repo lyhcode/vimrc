@@ -1,0 +1,5 @@
+.*
+bundle/vundle
+bundle/*
+tags
+xml-plugin.txt
