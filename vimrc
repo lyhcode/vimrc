@@ -41,7 +41,6 @@ Bundle 'gmarik/vundle'
 " Bundle 'Townk/vim-autoclose'
 " Bundle 'vim-scripts/OmniCppComplete'
 " Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'Lokaltog/vim-powerline'
 " Bundle 'mbbill/code_complete'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'vim-scripts/VisIncr'
@@ -254,11 +253,23 @@ set smarttab		" insert tabs on the start of a line according to context
 "}      							
 
 " status line {
-"set laststatus=2
+set laststatus=2
 "set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \
 "set statusline+=\ \ \ [%{&ff}/%Y]
 "set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
 "set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
+
+" The ultimate statusline/prompt utility.
+"Bundle 'Lokaltog/vim-powerline'
+" Download patched fonts from
+" - https://github.com/Lokaltog/powerline-fonts
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+let g:Powerline_theme="skwp"
+let g:Powerline_colorscheme="skwp"
+let g:Powerline_symbols = 'fancy'
+let Powerline_theme="skwp"
+let Powerline_colorscheme="skwp"
+let Powerline_symbols = 'fancy'
 
 function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "")

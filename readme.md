@@ -27,6 +27,17 @@ For more snipmate-snippets,
 
     make install-snippets
 
+### Powerline Fonts ###
+
+Powerline make your Vim status bar look awesome.
+
+Download patched fonts from https://github.com/Lokaltog/powerline-fonts,
+or make a nice looking "Source Code Pro" font.
+
+    make install-fonts
+
+Remember: Change your terminal font settings to Powerline series fonts.
+
 ### Note ###
 
 You must do a :BundleInstall command in vim to get all bundle resources.
