@@ -29,12 +29,12 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-" Bundle 'tpope/vim-fugitive'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
+
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails.git'
 
 " origin repos on github
 " Bundle 'vim-scripts/OmniCppComplete'
@@ -45,8 +45,6 @@ Bundle 'gmarik/vundle'
 " Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/nginx.vim'
 " Bundle 'guns/xterm-color-table.vim'
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-rails'
 " Bundle 'kchmck/vim-coffee-script'
 " Bundle 'wookiehangover/jshint.vim'
 
