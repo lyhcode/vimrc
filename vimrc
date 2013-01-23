@@ -46,47 +46,134 @@ Bundle 'ervandew/supertab'
 Bundle 'mbbill/code_complete'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'vim-scripts/VisIncr'
-Bundle 'wincent/Command-T'
 " Bundle 'shawncplus/phpcomplete.vim'
 " Bundle 'tomtom/tlib_vim'
-" Bundle 'MarcWeber/vim-addon-mw-utils'
-" Bundle 'garbas/vim-snipmate'
-" Bundle 'honza/snipmate-snippets'
 " Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/nginx.vim'
 " Bundle 'guns/xterm-color-table.vim'
 " Bundle 'tpope/vim-fugitive'
 " Bundle 'tpope/vim-rails'
 " Bundle 'kchmck/vim-coffee-script'
-" Bundle 'othree/html5.vim'
 " Bundle 'wookiehangover/jshint.vim'
 
 " origin repos on vim scripts
 " Bundle 'showcolor'
 " Bundle 'skammer/vim-css-color'
 
+
+" " Color
+"
+" Bundle 'desert256.vim'
+" Bundle 'Impact'
+" Bundle 'matrix.vim'
+" Bundle 'vibrantink'
+" Bundle 'vividchalk.vim'
+"
+" " Ftplugin
+" Bundle 'python_fold'
+"
+" " Plugin
+" Bundle 'The-NERD-tree'
+" Bundle 'AutoClose--Alves'
+" Bundle 'auto_mkdir'
+" Bundle 'cecutil'
+" Bundle 'fcitx.vim'
+" Bundle 'FencView.vim'
+" "Bundle 'FuzzyFinder'
+" Bundle 'jsbeautify'
+" Bundle 'L9'
+" Bundle 'Mark'
+" Bundle 'matrix.vim'
+" Bundle 'mru.vim'
+" Bundle 'The-NERD-Commenter'
+" "Bundle 'project.vim'
+" Bundle 'restart.vim'
 " Bundle 'taglist.vim'
-" let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;f:function;v:variables'
-let g:tagbar_type_groovy = {
-\ 'ctagstype' : 'groovy',
-\ 'kinds' : [
-\ 'p:package',
-\ 'c:class',
-\ 'i:interface',
-\ 'f:function',
-\ 'v:variables',
-\ ]
-\ }
-let g:tagbar_left=1
-let g:tagbar_autofocus=1
-let g:tagbar_autoclose=1
+" "Bundle 'templates.vim'
+" "Bundle 'vimim.vim'
+" Bundle 'css_color.vim'
+" Bundle 'hallettj/jslint.vim'
+
+" The IndentAnything plugin is intended to make it easier to write new
+" indentation scripts and/or supplement existing ones.  It makes the
+" assumption that all indentable languages have similar characteristics: 
+"
+" - blocks of code or text over multiple lines 
+" - continuation lines 
+" - comments 
+Bundle 'IndentAnything'
+
+" Indent, Syntax support
+"Bundle 'indent/html.vim'
+Bundle 'Javascript-Indentation'
+Bundle 'JavaScript-syntax'
+"Bundle 'mako.vim'
+"Bundle 'mako.vim--Torborg'
+"Bundle 'python.vim--Vasiliev'
+"Bundle 'gg/python.vim'
+"Bundle 'asciidoc.vim'
+"Bundle 'confluencewiki.vim'
+"Bundle 'moin.vim'
+
+
+" snipMate
+" snipMate.vim aims to be an unobtrusive, concise vim script that implements
+" some of TextMate's snippets features in Vim. A snippet is a piece of
+" often-typed text that you can insert into your document using a trigger word
+" followed by a <tab>. 
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/snipmate-snippets'
+
+" Modern Web Development
+"Bundle 'html5.vim'
+Bundle 'othree/html5.vim'
+Bundle 'othree/html5-syntax.vim'
+Bundle 'xml.vim'
+"Bundle 'json.vim'
+"Bundle 'css.vim'
+"Bundle 'actionscript.vim'
+
+" Command-T
+" doc refet http://git.wincent.com/command-t.git/blob_plain/HEAD:/doc/command-t.txt
+" use \ + t to seach a file
+" after BundleInstall, install C extension first
+" cd ~/.vim/bundle/command-t/ruby/command-t
+" ruby extconf.rb
+" make
+" !!!done, if no compiler error
+Bundle 'wincent/Command-T'
+set wildignore+=*.class,.git,.hg,.svn,target/**
+
+" ZenCoding
+Bundle 'ZenCoding.vim'
 
 " groovy, grails, grale support
 au BufNewFile,BufRead *.gradle setf groovy
 
-" tagbar, please install ctags first before use
+" Use tagbar instead of taglist
+"Bundle 'taglist.vim'
+"let s:tlist_def_groovy_settings = 'groovy;p:package;c:class;i:interface;f:function;v:variables'
+
+" Tagbar, the Vim class outline viewer
 Bundle 'majutsushi/tagbar'
+" F8 hotkey to toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_left=1
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
+" let tagbar support groovy, required ~/.ctags for groovy syntax
+let g:tagbar_type_groovy = {
+    \ 'ctagstype' : 'groovy',
+    \ 'kinds' : [
+        \ 'p:package',
+        \ 'c:class',
+        \ 'i:interface',
+        \ 'f:function',
+        \ 'v:variables',
+    \ ]
+\ }
+
 
 
 if !has('gui_running')
@@ -197,8 +284,8 @@ nnoremap <silent> <F3> <Esc>:tabp<CR>
 nnoremap <silent> <F4> <Esc>:tabn<CR>
 nnoremap <silent> <C-Left> <Esc>:tabp<CR>
 nnoremap <silent> <C-Right> <Esc>:tabn<CR>
-nnoremap <silent> <F7> <Esc><C-B>
-nnoremap <silent> <F8> <Esc><C-D>
+" nnoremap <silent> <F7> <Esc><C-B>
+" nnoremap <silent> <F8> <Esc><C-D>
 
 
 " use TAB for Makefile
