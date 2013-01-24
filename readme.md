@@ -65,4 +65,5 @@ Vim status line with powerline plugin and patched Source Code Pro font.
 ### References ###
 
 - http://github.com/beer/shell
-
+- http://www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/
+- http://www.objectpartners.com/2012/02/28/using-vim-as-your-grails-ide-part-2/

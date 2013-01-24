@@ -99,8 +99,6 @@ Bundle 'IndentAnything'
 
 " Indent, Syntax support
 "Bundle 'indent/html.vim'
-Bundle 'Javascript-Indentation'
-Bundle 'JavaScript-syntax'
 "Bundle 'mako.vim'
 "Bundle 'mako.vim--Torborg'
 "Bundle 'python.vim--Vasiliev'
@@ -108,7 +106,6 @@ Bundle 'JavaScript-syntax'
 "Bundle 'asciidoc.vim'
 "Bundle 'confluencewiki.vim'
 "Bundle 'moin.vim'
-
 
 " snipMate
 " snipMate.vim aims to be an unobtrusive, concise vim script that implements
@@ -120,7 +117,9 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'honza/snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
 
-" Modern Web Development
+"---------- Modern Web Development ----------
+Bundle 'Javascript-Indentation'
+Bundle 'JavaScript-syntax'
 "Bundle 'html5.vim'
 Bundle 'othree/html5.vim'
 Bundle 'othree/html5-syntax.vim'
@@ -128,6 +127,17 @@ Bundle 'xml.vim'
 "Bundle 'json.vim'
 "Bundle 'css.vim'
 "Bundle 'actionscript.vim'
+
+let xml_use_xhtml = 1
+let html_use_css = 1
+let html_number_lines = 0
+let use_xhtml = 1
+
+" HTML
+au FileType html set ft=xml
+au FileType html set syntax=html
+
+
 
 " Command-T
 " doc refet http://git.wincent.com/command-t.git/blob_plain/HEAD:/doc/command-t.txt
