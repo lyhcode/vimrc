@@ -4,7 +4,7 @@ install:
 	ln -sf `pwd`/ctags ~/.ctags
 
 backup:
-	tar zcvf ~/.vim-backup.tgz ~/.vim ~/.vimrc ~/.ctags ~/.tmux.conf
+	tar zcvf ~/.vim-backup.tgz $(wildcard ~/.vim) $(wildcard ~/.vimrc) $(wildcard ~/.ctags) $(wildcard ~/.tmux.conf)
 
 install-snippets:
 	$(info Enable and do :BundleInstall snipmate-snippets first)

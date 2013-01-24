@@ -1,6 +1,6 @@
 # The Vim for Rapid Coders #
 
-<strong>VIM</strong> for <strong>R</strong>apid <strong>C</strong>oders
+<strong style="font-size:150%;color:blue">VIM</strong> for <strong style="font-size:150%;color:blue">R</strong>apid <strong style="font-size:150%;color:blue">C</strong>oders
 
 ### Project goals ###
 
