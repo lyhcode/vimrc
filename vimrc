@@ -144,6 +144,7 @@ set wildignore+=*.class,.git,.hg,.svn,target/**
 Bundle 'ZenCoding.vim'
 
 " groovy, grails, grale support
+Bundle 'vim-scripts/grails-vim'
 au BufNewFile,BufRead *.gradle setf groovy
 
 " Use tagbar instead of taglist
