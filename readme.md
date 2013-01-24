@@ -1,6 +1,6 @@
-# The Vim for Rational Coders #
+# The Vim for Rapid Coders #
 
-
+<strong>VIM</strong> for <strong>R</strong>apid <strong>C</strong>oders
 
 ### Project goals ###
 
