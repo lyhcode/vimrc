@@ -1,21 +1,21 @@
-# Vim for Coders #
+# The Vim for Rational Coders #
+
+
 
 ### Project goals ###
 
-- Built-in Vundle for clean bundles/plugins management.
-- For modern web devloper need.
-- Support Groovy and Grails.
+- Vundle based Vim bundles/plugins management, clean and easy.
+- Fit into Modern Web Development.
+- Support Groovy, Gradle and Grails.
 
 ### Install ###
 
-Following commands will make a copy to your home directory.
+Clone a copy into your home.
 
-    # clone to your home
     git clone git://github.com/lyhcode/vimrc.git ~/.vim
 
-Install with "make install"
+Install with "make install".
 
-    # make it
     cd ~/.vim
     make install
 
