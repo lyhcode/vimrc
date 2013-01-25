@@ -31,35 +31,89 @@
 
 <p><strong>VIM</strong> for <strong>R</strong>apid <strong>C</strong>oders</p>
 
-<h3>Project goals</h3>
+<p>Vim is a text editor written by Bram Moolenaar and first released publicly in 1991. Based on the vi editor common to Unix-like systems, Vim is designed for use both from a command line interface and as a standalone application in a graphical user interface. Vim is free and open source software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda. The license is compatible with the GNU General Public License. (from WikiPedia)</p>
+
+<h2>Objectives</h2>
 
 <ul>
 <li>Vundle based Vim bundles/plugins management, clean and easy.</li>
 <li>Fit into Modern Web Development.</li>
 <li>Support Groovy, Gradle and Grails.</li>
-</ul><h3>Install</h3>
+</ul><h2>Install</h2>
+
+<h3>Vim</h3>
+
+<p><a href="http://www.vim.org/">http://www.vim.org/</a></p>
+
+<p>For Ubuntu Linux developers,</p>
+
+<pre><code>sudo apt-get install vim
+</code></pre>
+
+<p>For Mac OS X developers, you already have a built-in console Vim editor.
+But you can stilll manually install Vim in different way.</p>
+
+<p>Homebrew, <a href="http://mxcl.github.com/homebrew/">http://mxcl.github.com/homebrew/</a></p>
+
+<pre><code>sudo brew install macvim
+</code></pre>
+
+<p>MacPorts, <a href="http://www.macports.org/">http://www.macports.org/</a></p>
+
+<pre><code>sudo port install vim
+sudo port install MacVim
+</code></pre>
+
+<p>Or take a look at Alloy branch.</p>
+
+<p>MacVim with file browser <a href="https://github.com/alloy/macvim">https://github.com/alloy/macvim</a></p>
+
+<h3>Download</h3>
 
 <p>Clone a copy into your home.</p>
 
 <pre><code>git clone git://github.com/lyhcode/vimrc.git ~/.vim
 </code></pre>
 
-<p>Install with "make install".</p>
+<p>Change the working directory to .vim in your home.</p>
 
 <pre><code>cd ~/.vim
-make install
 </code></pre>
 
-<p>Your old vim configs will backup to "~/.vim-backup.tgz" file.</p>
+<p>Will following backup commands, your old vim configs will backup to "~/.vim-backup.tgz" file.
+If you never use the Vim before, just skip this step.</p>
 
-<h3>More Snippets</h3>
+<pre><code>make backup
+</code></pre>
+
+<p>Install is simple.</p>
+
+<pre><code>make install
+</code></pre>
+
+<p>Take a look at your new .vimrc settings.</p>
+
+<pre><code>vim ~/.vimrc
+</code></pre>
+
+<p>Due to all your bundles(Vim plugins) included in .vimrc are not install.
+You should run :BundleInstall command in Vim.
+It will download bundle files into ~/.vim/bundle directory.</p>
+
+<pre><code># Open your Vim editor and run this command. (Not in system shell.)
+:BundleInstall
+</code></pre>
+
+<p>Close and re-open your Vim after all jobs done.</p>
+
+<h2>Snippets</h2>
 
 <p>For more snipmate-snippets,</p>
 
 <pre><code>make install-snippets
 </code></pre>
 
-<h3>Powerline Fonts</h3>
+<h2>Powerline Fonts</h2>
 
 <p>Powerline make your Vim status bar look awesome.</p>
 
@@ -71,18 +125,7 @@ or make a nice looking "Source Code Pro" font.</p>
 
 <p>Remember: Change your terminal font settings to Powerline series fonts.</p>
 
-<h3>Note</h3>
-
-<p>You must do a :BundleInstall command in vim to get all bundle resources.</p>
-
-<pre><code># In your vim, run this command.
-# It will install all required plugins.
-:BundleInstall
-</code></pre>
-
-<p>After installation done, remember to restart your vim.</p>
-
-<h3>ScreenShots</h3>
+<h2>ScreenShots</h2>
 
 <p>Here is my Vim run under tmux. A modern and fancy coding environment. Vim Rocks!</p>
 
@@ -96,9 +139,10 @@ or make a nice looking "Source Code Pro" font.</p>
 
 <p><img src="https://raw.github.com/lyhcode/vimrc/master/screenshot/screen3.png" alt="screen"></p>
 
-<h3>References</h3>
+<h2>References</h2>
 
 <ul>
+<li><a href="http://www.vim.org/scripts/index.php">http://www.vim.org/scripts/index.php</a></li>
 <li><a href="http://github.com/beer/shell">http://github.com/beer/shell</a></li>
 <li><a href="http://www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/">http://www.objectpartners.com/2012/02/21/using-vim-as-your-grails-ide-part-1-navigating-your-project/</a></li>
 <li><a href="http://www.objectpartners.com/2012/02/28/using-vim-as-your-grails-ide-part-2/">http://www.objectpartners.com/2012/02/28/using-vim-as-your-grails-ide-part-2/</a></li>
