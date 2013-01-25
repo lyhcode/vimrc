@@ -1,6 +1,6 @@
 # The Vim for Rapid Coders #
 
-<strong style="font-size:150%;color:blue">VIM</strong> for <strong style="font-size:150%;color:blue">R</strong>apid <strong style="font-size:150%;color:blue">C</strong>oders
+**VIM** for **R**apid **C**oders
 
 Vim is a text editor written by Bram Moolenaar and first released publicly in 1991. Based on the vi editor common to Unix-like systems, Vim is designed for use both from a command line interface and as a standalone application in a graphical user interface. Vim is free and open source software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda. The license is compatible with the GNU General Public License. (from WikiPedia)
 
