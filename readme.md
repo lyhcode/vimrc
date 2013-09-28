@@ -46,6 +46,11 @@ Change the working directory to .vim in your home.
 
     cd ~/.vim
 
+Update git submodule directory (install vundle).
+
+    git submodule init
+    git submodule update
+
 Will following backup commands, your old vim configs will backup to "~/.vim-backup.tgz" file.
 If you never use the Vim before, just skip this step.
 
@@ -84,6 +89,14 @@ or make a nice looking "Source Code Pro" font.
     make install-fonts
 
 Remember: Change your terminal font settings to Powerline series fonts.
+
+For Ubuntu users only:
+
+Use a PPA from Gea-Suan Lin.
+
+    sudo apt-add-repository ppa:gslin/powerline-fonts
+    sudo apt-get update
+    sudo apt-get install powerline-fonts
 
 ## ScreenShots ##
 

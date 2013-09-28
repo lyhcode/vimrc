@@ -206,14 +206,14 @@ if has('gui_running')
 else
     " set t_Co=256
     colorscheme 256-jungle-black
-    " set background=dark
-    set background=light
+    set background=dark
+    " set background=light
 
-    hi CursorLine guibg=#003853 ctermbg=17 gui=none cterm=none
-    hi Comment ctermfg=darkcyan
-    hi ColorColumn ctermbg=darkgray
-    hi StatusLine ctermbg=19 ctermfg=white
-    hi LineNr ctermfg=236 ctermbg=232
+    " hi CursorLine guibg=#003853 ctermbg=17 gui=none cterm=none
+    " hi Comment ctermfg=darkcyan
+    " hi ColorColumn ctermbg=darkgray
+    " hi StatusLine ctermbg=19 ctermfg=white
+    " hi LineNr ctermfg=236 ctermbg=232
 
     set cc=80               " corlorcolumn
     set foldcolumn=2        " increase left margin 
