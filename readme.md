@@ -83,10 +83,11 @@ For more snipmate-snippets,
 
 Powerline make your Vim status bar look awesome.
 
-Download patched fonts from https://github.com/Lokaltog/powerline-fonts,
-or make a nice looking "Source Code Pro" font.
+Download patched fonts from Lokaltog repository.
 
-    make install-fonts
+* https://github.com/Lokaltog/powerline-fonts
+
+Change Terminal font setting to enable new fonts.
 
 Remember: Change your terminal font settings to Powerline series fonts.
 
